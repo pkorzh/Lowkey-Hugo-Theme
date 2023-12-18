@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-small">{{ .Title }}</h2>
+  </header>
+
+  {{ partial "single/table-of-contents" . }}
+
+  <section>{{ .Content | emojify }}</section>
+</article>
+
+{{ end }}
